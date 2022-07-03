@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE NOTE SYSTEM "xml.dtd">
+<NOTE>
+    <to ID = "to">Ye </to>
+    <from ID = "from">Dai </from>
+    <date>2022-1-1</date>
+    <header ID = "to"> remember</header>
+    <body ID = "body"> remember me get up</body>
+    <author>&AUTHOR;&COPYRIGHT;</author>
+</NOTE>

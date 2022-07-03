@@ -1,0 +1,27 @@
+<!--定义实体，<!ENTITY 实体名称 "实体的值">
+  一个实体由三部分构成: 一个和号 (&), 一个实体名称, 以及一个分号 (;)
+  使用 <author>&实体名称;&copyright;</author>-->
+<!ENTITY AUTHOR "Hongquan Dai">
+<!ENTITY COPYRIGHT "Copyright cr-leasing">
+<!ENTITY EMAIL "daihongquan@cr-leasing">
+<!--定义元素，EMPTY 空元素，
+             ANY 任何可解析数据的组合，
+             不加符号表示出现且仅出现一次，
+             + 至少出现一次，
+             * 出现零次或多次的元素，
+             ？出现零次或一次的元素，
+             | 非.../既...，
+             <!ELEMENT note (#PCDATA|to|from|header|message)*> 混合型的内容
+-->
+<!ELEMENT NOTE (to,from,date,header,body,author?)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!--定义属性 #RREQUIRED 必输，#RIMPLIED 非必输，#RFIXED value 固定值-->
+<!ATTLIST to ID CDATA #REQUIRED>
+<!ATTLIST from ID CDATA #REQUIRED>
+<!ATTLIST header ID CDATA #IMPLIED>
+<!ATTLIST body ID CDATA #IMPLIED>

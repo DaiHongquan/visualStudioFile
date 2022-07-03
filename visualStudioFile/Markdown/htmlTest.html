@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>没有一个好名字</title>
+        <script>
+            document.write("你好,html!");
+            
+        </script>
+        <script src="js.js">
+            
+        </script>
+        <noscript>
+            <p>无法加载script</p>
+        </noscript>
+        <link rel="stylesheet" type="text/css" href="css.css">
+    </head>
+    <body>
+        <br>
+        <h1 style="color:#00FF00">这是我的HTML练习</h1>
+        <p><i>这是第一个段落</i></p>
+        <div class="mycalss" height="50%" width="50%" >天王盖地虎<strong>此处分隔</strong></div>
+        <p><del>删除线</del></p>
+        <p><ins>下划线</ins></p>
+        <p>演示<sub>下角标</sub></p>
+        <p>演示<sup>上角标</sup></p>
+
+        <h2>演示我的样式</h2>
+        <p id="myid">
+            这是一个abc的样式演示段落，<br>
+            这是第二行
+        </p>
+        <h2>演示表格</h2>
+        <table border="1">
+            <tr>
+                <th>列1</th>
+                <th>列2</th>
+                <th>列3</th>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td rowspan="2">2131</td>
+                <td colspan="2">2223</td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>33</td>
+            </tr>
+        </table>
+        <h2>演示图片与注释</h2>
+        <!--注释-->
+        <a href="https://www.baidu.com/" target="_blank">百度一下，你就知道</a>
+        <br>
+        <img height="100" width="100" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0314%252F94ad46dbj00qpy1do0021d200rs00rsg008t008t.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1656826971&t=99b55df3a8d9b4cf743028bcd9cb3e2d" alt="无法加载图片">
+        
+        <h2>演示表单</h2>
+        <form action="file:///D:/study/visualStudioFile/Markdown/htmlTest.html" method="get" >
+            <input type="radio" id="man" name="sex" value="man">
+            <label for="man">男</label>
+            <br>
+            <input type="radio" id="woman" name="sex" value="woman">
+            <label for="woman">女</label>
+            <br>
+            <input type="checkbox">软件设计师
+            <br>
+            <input type="checkbox">男神
+            <br>
+            <label for="age">女</label>
+            <select id="age" name="age">
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+            </select>
+            <br>
+            <label for="username">用户名：</label>
+            <input type="text" id="username" name="username" placeholder="请输入用户名">
+            <br>
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="password" placeholder="请输入密码">
+            <br>
+            <label for="submit"></label>
+            <input type="submit" id="submit" name="submit" value="提交按钮">
+            
+        </form>
+
+        <h2>演示引入页面</h2>
+        <iframe src="https://www.w3cschool.cn/" height="200" width="50%"></iframe>
+
+        <h2>演示列表</h2>
+        <ul>
+            <li>无序1</li>
+            <li>无序2</li>
+            <li>无序3</li>
+        </ul>
+        <ol>
+            <li>有序1</li>
+            <li>有序2</li>
+            <li>有序3</li>
+        </ol>
+
+        <dl>
+            <dt>苹果（自定义列表）</dt>
+            <dd>又大又甜</dd>
+            <dt>西瓜（自定义列表）</dt>
+            <dd>也大也甜</dd>
+        </dl>
+
+        <h2>演示字符实体</h2>
+        单引号：&apos;
+        <br>
+        双引号：&quot;
+        <br>
+        空格：空&nbsp;格
+        <br>
+        大于号：&gt;
+        <br>
+        小于号：&lt;
+        <br>
+        输入符号:&amp;
+        
+        <h2>演示表格2</h2>
+        <table >
+
+        </table>
+
+        <p id="aP">你好吗</p>
+        <input type="button" id="button1" name="button1" value="js按钮" onclick="checkRegEx('qQ12',/qq1/i)">
+    </body>
+
+</html>

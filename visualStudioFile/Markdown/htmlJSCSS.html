@@ -1,0 +1,138 @@
+<!--html5-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>html/JS/CSS学习</title>
+        <script src="resource/jQuery360.js"></script>
+        <script src="htmlJSCSS.js"></script>
+        <noscript>
+            <p>无法加载JavaScript</p>
+        </noscript>
+        <style>
+            p .red{
+                color: red;
+            }
+        </style>   
+        <link rel="stylesheet" href="htmlJSCSS.css">
+       
+    </head>
+    <body>
+        
+        <div id="logo1">Logo</div>
+        <div id="logo2"></div>
+        <br>
+        <p id="box" class="pclass">hello world!</p>
+        <div class="float">
+            <h2 >表格</h2>
+            <table border="1" id="table1" float>
+               <caption>演示表格</caption>
+               <tr>
+                  <th>列1</th>
+                  <th>列2</th>
+                  <th>列3</th>
+                </tr>
+               <tr>
+                   <td>11</td>
+                   <td>12</td>
+                   <td>13</td>
+               </tr>
+               <tr>
+                   <td rowspan="2">21</td>
+                   <td colspan="2">22</td>
+               </tr>
+               <tr>
+                   <td>32</td>
+                   <td>33</td>
+               </tr>
+           </table>
+        </div>
+        <h2>列表</h2>
+        <ul>
+            <li>无序列表1</li>
+            <li>无序列表2</li>
+            <li>无序列表3</li>
+        </ul>
+        <ol>
+            <li>有序列表1</li>
+            <li>有序列表2</li>
+            <li>有序列表3</li>
+        </ol>
+        <ul id="ul">
+            <li class="li">无序列表1</li>
+            <li>无序列表2</li>
+            <li>无序列表3</li>
+        </ul>
+        <h2>超链接展示</h2>
+        <a id="aLink" href="https://www.baidu.com/" target="_blank">百度一下，你就知道</a>
+        <p id="cursor">鼠标光标样式</p>
+        <br>
+        
+        <h2>阴影</h2>
+        <div class="float">
+            <h2>伪类与伪元素</h2>
+            <span class="span"><span>第一个子元素</span><span>第二个</span></span>
+            <p class="span1">伪元素jss</p>
+         </div>
+        <div id="div" >
+        <div id="div1">凸起文字</div>
+        <div id="div2">凹下文字</div>
+        </div>
+        <div class="float">
+            <p ><span id="display">消失了哦</span>演示一下display：none</p>
+        </div>
+        <p>演示一下visibility：hidden<span id="visibility">消失了哦</span></p>
+        <br>
+        <div class="float">
+           <div id="linearGradient">左右线性渐变</div>
+           <br>
+           <div id="linearGradientTop">上下线性渐变</div>
+           <br>
+           <div id="linearGradient45deg">对角线渐变</div>
+           <br>
+           <div id="linearGradientTopMore">多色渐变</div>
+        </div>
+        <br>
+        <div id="radialGradient">椭圆径向渐变</div>
+        <br>
+        <div id="radialGradientCircle">圆形径向渐变</div>
+        <br>
+        <div class="float">
+            <div id="transformRotate">顺时针旋转15°</div>
+            
+        </div>
+            <div id="transformTranslate">x轴倾斜15°</div>
+        <br>
+        <div class="float">
+            <div id="transform3d">3d旋转</div>
+        </div>
+        </div>
+            <div id="filter">过滤器</div>
+        <br><br><br><br><br><br>
+        
+        <form action="#" method="get">
+            <label for="username"><input type="text" id="username" name="username" placeholder="请输入用户名"></label> 
+            <br>
+            <label for="password"><input type="password" id="password" name="password" placeholder="请输入密码"></label>
+            <br>
+            <label for="man">性别：<input type="radio" id="man" name="sex" value="man">男</label>
+            
+            <label for="woman"><input type="radio" id="woman" name="sex" value="woman">女</label>
+            <br>
+            <label for="student">角色：<input type="checkbox" id="student" name="role" value="student">学生</label>
+           
+            <label for="teacher"><input type="checkbox" id="teacher" name="role" value="teacher">老师</label>
+            <br>
+            <label for="sex">年龄：<select id="sex" name="sex">
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                             </select></label>
+            <br>                 
+            <input class="submit" type="submit" value="注册">    
+            <p id="jQuery" >    </p>         
+        </form>
+
+
+    </body>
+</html>

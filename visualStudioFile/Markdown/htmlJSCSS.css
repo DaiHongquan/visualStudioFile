@@ -1,0 +1,352 @@
+/**/
+h1 {
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+/*元素选择器*/
+body {
+    background-color: antiquewhite;/*背景颜色*/
+}
+/*元素选择器与文本样式*/
+p.pclass {
+    font-family: Arial, Helvetica, sans-serif;/*字体家族，可以直接写字体名称，如"微软雅黑"*/
+    font-size: 16px;/*字体大小*/
+    font-style: italic;/*斜体*/
+    font-weight: 700;/*字体宽度，400为标准，700为粗体，范围为100~900*/
+    font-variant: small-caps;/*小型大写字母*/
+    text-align: center;/*水平对齐文本，left,right,center,justify*/
+    vertical-align: ;/*垂直对齐文本，top,middle,bottom*/
+    text-decoration-line: none;/*文本装饰-线条类型：none默认，inherit继承父元素，overline文本上方绘制水平线，underline下方，line-through中间绘制相当于<s>*/
+    text-decoration-color: aqua;/*线条颜色*/
+    text-decoration-style: solid;/*线条样式*/
+    text-indent: 32px;/*首行文本缩进 px,pt,cm.em,%，inherit均可，如果为负值，表示缩进到左边即悬挂缩进*/
+    text-shadow: 5px 2px 4px grey;/*文本阴影 参数 x,y,blur模糊距离,color,支持负值*/
+    text-transform: none;/*文本大小写，capitalize首字母大写，uppercase全部大写，lowercase全部小写，none*/
+    letter-spacing: 4px;/*文本字符间距，normal，inherit，px,pt,cm.em,%具体值*/
+    word-spacing: 30px;/*单词间距，normal，inherit，px,pt,cm.em,%具体值，允许负值，挤得更紧*/
+    white-space: normal;/*设置元素内换行符，normal，inherit，nowrap文本不会换行直到遇到<br>标签*/
+}
+/*id选择器与盒模型，content内容、padding内边距（填充）、border边框、margin外边距,分别由上top,右right,下bottom,左left顺序组成
+  background背景属性：background-color,background-image,background-repeat,background-attachment固定(fixed)或者滚动(scroll)
+  background-size: length|percentage|cover|contain; length 宽与高，percentage父元素百分比，cover扩展至足够大，完全覆盖背景，contain宽高完全适应内容
+  background-clip:指定背景绘画区域 border-box 默认，绘制到边框外边缘|padding-box 绘制到填充的外边缘|content-box 绘制在内容框
+  rgba(255, 255, 255, alpha) alpha透明度 0完全透明 1不透明
+  背景图可以以逗号分隔层叠
+  opacity: 0.0到1。0 属性opacity表示不透明度，0完全透明 1不透明
+*/
+#box {
+    padding-top: 1px;/*上填充*/
+    padding-right: 1px;/*右填充*/
+    padding-bottom: 1px;/*下填充*/
+    padding-left: 1px;/*左填充*/
+    margin: 0.1em;/*默认1em=16px，外边距 yellow*/
+    border: 5px dotted  rgba(255, 255, 255, 0.5);/*border-width 宽度，border-style 样式（none默认，dotted点状，solid实线，dashed虚线，double双线），border-color 颜色*/
+    background-color: blanchedalmond;/*背景颜色 rgb，rgba，颜色单词，十六进制*/
+    background-image: url("resource/background.jpg");/*背景图片，相对地址，绝对地址、网络地址*/
+    background-size: 50%;/*background-size: length|percentage|cover|contain; length 宽与高，percentage父元素百分比，cover扩展至足够大，完全覆盖背景，contain宽高完全适应内容*/
+    background-clip: border-box;/*background-clip:指定背景绘画区域 border-box 默认，绘制到边框外边缘|padding-box 绘制到填充的外边缘|content-box 绘制在内容框*/
+    background-repeat: space;/*repeat平铺,repeat-x水平平铺,repeat-y纵向平铺,no-repeat不重复,round自动缩放直到适应且填充满整个容器，space 相同间距*/
+    background-attachment: fixed;/*固定(fixed)或者滚动(scroll),inherit*/
+    opacity: 0.8;
+}
+
+
+/*id选择器*/
+#div {
+    
+    color:antiquewhite;
+    font: 500 80px "微软雅黑" ;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 100px;/*圆角*/
+    width: 200px;
+    height: 200px;
+    line-height: 100px;
+}
+/*子元素选择器，只对当前层级子元素生效*/
+#div1 {
+    box-shadow: 2px 2px rgba(248, 250, 249, 0.918);/*盒子阴影*/
+    font-size: 40px;
+    
+    text-shadow: 1px 1px 1px #000,-1px -1px 1px #fff;/*阴影，凸起文字，使用inset阴影在边框内*/
+}
+/*后代选择器，无论后续有多少个层级子元素都生效*/
+#div2 {
+    box-shadow: 2px 2px rgba(248, 250, 249, 0.918);/*盒子阴影*/
+    font-size: 40px;
+    
+    text-shadow: -1px -1px 1px #000,1px 1px 1px #fff;/*阴影，凹下文字*/
+}
+/*属性选择器与伪正则选择器--[attr]包含attr属性的所有元素；
+                          [attr=val]attr属性值为val的所有元素；
+                          [attr~=val]attr属性值包含val的所有元素--；
+                          [attr|=val]attr属性值是val或以val开头的所有元素；
+                          [attr^=val]attr属性值是以val开头的所有元素；
+                          [attr$=val]attr属性值是以val结尾的所有元素；
+                          [attr*=val]attr属性值包含val的所有元素；
+  列表样式 list-style*/
+ul[id*="ul"] {
+    list-style-type: circle;/*none无标记,disc实心圆,circle空心圆,square实心方块,decimal数字，decimal-leading-zero 0开头的数字,
+                              lower-roman小写罗马数字,upper-roman大写罗马数字,lower-alpha小写字母,upper-alpha大写字母*/
+    list-style-position: outside;/*指定标记框的位置 inside,outside*/                          
+    list-style-image: url("ico.ico");/*用图标代替项目标记*/
+    /*list-style: square outside none;list-style-type、list-style-position、list-style-image的简写版本*/   
+}                        
+/*属性选择器与表格样式*/
+table[id*="ble"] {
+    border-collapse: separate;/*边框collapse合并,默认separate分开，inherit，如果是分开，则可以使用border-spacing与empty-cells*/
+    border-spacing: 5px 10px;/*水平20px间距，垂直40px间距*/
+    empty-cells: show;/*默认show,在空单元格周围绘制边框,hide不在空单元格周围绘制边框。前提border-collapse: separate*/
+    caption-side: top;/*指定标题位置 top顶部，bottom底部*/
+    table-layout: auto;/*列宽度计算,默认automatic由单元格内容设定，fixed由表格和列宽度设定*/
+}
+/*属性选择器与链接样式，必须遵从 a:link访问前,a:visited访问后,a:hover位于链接上方,a:active被点击时顺序
+*/
+a[id*="aLink"]:link{
+    color: blue;
+    /*text-decoration: none;去掉下划线*/
+    /*border:none;从包含链接的图像中删除边框*/
+    /*outline:none;删除IE中点击链接行上的虚线边框*/
+}
+a[id*="aLink"]:visited{
+    color: gray;
+}
+a[id*="aLink"]:hover{
+    color: red;
+    font-weight: 700;
+}
+a[id*="aLink"]:active{
+    color: yellow;
+}
+/*定义鼠标光标类型（形状）cursor：默认auto浏览器设置的光标,default 默认光标,crosshair十字准线,pointer手型,move指示对象可移动,wait、help*/
+p#cursor {
+    cursor: move;
+    color: red;
+    float: right;
+    text-shadow: 5px 5px 1px gray;
+    font-weight: 900;
+}
+/*盒模型行为方式 display:none直接消失（隐藏元素并脱离文档流），inline内联元素，block块级元素，inline-block既有inline属性也有block属性*/
+span#display {
+    display: none;
+}
+/*visibility 指定元素是可见还是隐藏*/
+span#visibility {
+    visibility: hidden;/*与display:none不同，只是看不见仍然占用空间*/
+}
+/*position定位：absolute绝对定位（相对于static定位以外的第一个父元素进行定位），元素的位置通过top,right,bottom,left进行规定，
+                fixed固定定位，相对于浏览器窗口定位，元素的位置通过top,right,bottom,left进行规定
+                relative相对定位，相对正常位置进行定位，，元素的位置通过top,right,bottom,left进行规定
+                static默认值，没有定位，忽略top,right,bottom,left
+  ra              
+                */
+#logo1 {
+    background-color: aqua;
+    background-image: url("resource/bkg.ico");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;/*fixed固定定位，相对于浏览器窗口定位，元素的位置通过top,right,bottom,left进行规定*/
+    right: 40px;/*距离右侧20px*/
+    top: 42px;/*距离左侧2px*/
+    height: 40px;/*高25px*/
+    width: 40px;/*宽40px*/
+    z-index: 10;/*序号为10，比下面的序号5要大，展示在前面*/
+    border-radius: 50%;/*为宽高的一半时为圆*/
+
+}
+/*z-index指定堆栈顺序，修改受position影响的元素的显示顺序，值越高越往前，越能被看见*/
+#logo2 {
+    background-color: aquamarine;
+    position: fixed;
+    right: 20px;
+    top: 22px;
+    height: 80px;
+    width: 80px;
+    z-index: 5;
+    border-radius: 50%;
+}
+/*float浮动，通常与图像一起使用，值集为left向左浮动,right向右浮动,none不浮动。
+                 同时设置图像与文本，可以并排显示*/
+.float{
+    float: right;
+    overflow:visible;/*overflow 溢出时，值集 默认visible内容不被修剪，呈现在元素框之外,hidden超出元素框隐藏超出内容，scroll内容被修剪显示滚动条，auto如果超出则滚动条*/
+}
+#right{
+    text-align: right;
+}
+/*clear 清除浮动，值集为left清除左浮动,right清除浮动,both清除左右浮动，none两边都可以有浮动。*/
+
+/*伪类 :first-child 第一个子元素 :last-child 最后一个子元素 :nth-child(n) 第n个子元素，2n表示偶数个子元素，2n+1表示奇数个子元素*/
+.span span:first-child {
+    color: aqua;
+    background: linear-gradient(90deg,rgba(red, green, blue, 0.5) 30%,rgba(red, green, rgb(230, 80, 11), 0.5) 100%) ;
+    -webkit-transform: inherit;/*webkit内核前缀*/
+    -ms-animation: alternate;/*tradent内核前缀*/
+}
+
+/*伪元素 必须是块级元素 ::before元素之前 ::after元素末尾 :first-line第一行 :first-letter第一个字符*/
+
+.span1::first-letter {
+    display: block;
+    content: url("ico.ico"); 
+    font-weight: 900;
+    color: rgb(98, 0, 255);
+    background: linear-gradient(90deg,rgba(red, green, blue, 0.5) 30%,rgba(red, green, rgb(230, 80, 11), 0.5) 100%) ;
+}
+/*linear-gradient线性渐变 linear-gradient(top,DeepSkyBlue 50%, Black 100%) 从上开始渐变 百分号表示颜色停止位置  float
+rgba a透明度取值范围0~1*/
+#linearGradient {
+    color: white;
+    width: 200px;
+    font-weight: 900;
+    text-align: center;
+    /*background: linear-gradient(DeepSkyBlue, Black);*/
+    /*background: -webkit-linear-gradient(0deg,DeepSkyBlue 10%, Black 90%);0度表示从左到右的渐变，90度表示从上到下的渐变*/
+    background: -webkit-linear-gradient(left,DeepSkyBlue 10%, Black 90%);/*如果有方向需要加前缀*/
+}
+#linearGradientTop {
+    color: white;
+    width: 200px;
+    font-weight: 900;
+    text-align: center;
+    /*background: linear-gradient(DeepSkyBlue, Black);*/
+    /*background: -webkit-linear-gradient(0deg,DeepSkyBlue 10%, Black 90%);0度表示从左到右的渐变，90度表示从上到下的渐变*/
+    background: -webkit-linear-gradient(top,DeepSkyBlue 10%, Black 90%);/*如果有方向需要加前缀*/
+}
+#linearGradient45deg {
+    color: white;
+    width: 200px;
+    vertical-align: middle;
+    height: 100px;
+    font-weight: 900;
+    text-align: center;
+    /*background: linear-gradient(DeepSkyBlue, Black);*/
+    /*background: -webkit-linear-gradient(0deg,DeepSkyBlue 10%, Black 90%);0度表示从左到右的渐变，90度表示从上到下的渐变*/
+    background: -webkit-linear-gradient(45deg,DeepSkyBlue 10%, Black 90%);/*如果有方向需要加前缀*/
+}
+#linearGradientTopMore {
+    color: white;
+    width: 200px;
+    vertical-align: middle;
+    height: 100px;
+    font-weight: 900;
+    text-align: center;
+    /*background: linear-gradient(DeepSkyBlue, Black);*/
+    /*background: -webkit-linear-gradient(0deg,DeepSkyBlue 10%, Black 90%);0度表示从左到右的渐变，90度表示从上到下的渐变*/
+    background: -webkit-linear-gradient(top,DeepSkyBlue 10%, yellow 50%,Black 90%);/*如果有方向需要加前缀*/
+}
+
+/*radial-gradient径向渐变 radial-gradient(circle,DeepSkyBlue, Black); ellipse默认 椭圆形的径向渐变，circle圆形的径向渐变*/
+#radialGradient {
+    height: 150px;
+    width: 200px;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    vertical-align: middle;
+    /*background: linear-gradient(DeepSkyBlue, Black);*/
+    /*background: -webkit-linear-gradient(0deg,DeepSkyBlue 10%, Black 90%);0度表示从左到右的渐变，90度表示从上到下的渐变*/
+    background: -webkit-radial-gradient(ellipse,DeepSkyBlue, yellow,Black);/*如果有方向需要加前缀*/
+}
+#radialGradientCircle {
+    height: 150px;
+    width: 200px;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    vertical-align: middle;
+    /*background: linear-gradient(DeepSkyBlue, Black);*/
+    /*background: -webkit-linear-gradient(0deg,DeepSkyBlue 10%, Black 90%);0度表示从左到右的渐变，90度表示从上到下的渐变*/
+    background: -webkit-radial-gradient(circle,DeepSkyBlue 5%, yellow 15%,Black 60%);/*如果有方向需要加前缀*/
+}
+/*transition 转换：在限定时间内从一个属性值转换到另一个属性值  all 0 ease 0
+  transition-property: none没有属性|all所有属性|property单个属性，列表以逗号分隔
+  transition-duration: 转换发生的持续时间 单位s ms
+  transition-timing-function: 转换速度函数 ease开始缓慢然后加速|ease-in缓步开始然后加速突然停止|ease-out快速启动减速停止|
+                              ease-in-out类似ease加速减速稍有不同|linear匀速转换|cubic-bezier(p0,p1,p2,p3)自定义转换函数 p取值0~1
+  transition-deay: 延迟开始时间 单位s ms
+  */
+a {
+    transition: color 5s ease 1s;/*property 颜色，duration 5s，timing-function ease，deay 1s*/
+    /*transition: font-weight 5s cubic-bezier(0,0,1,1)  1s;property 字体大小 3s，timing-function cubic-bezier(0,0,1,1)，deay 0.5s*/
+}
+
+/*transform rotate(15deg) 旋转 负值为逆时针旋转*/
+#transformRotate {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: aqua;
+    transform:translate(-50px,10px) rotate(15deg);/*transform rotate(15deg) 顺时针旋转15° 负值为逆时针旋转*/
+    transform-origin: 30% 80%;/*transform-origin 更改已转换元素中心点位置 默认x轴50% y轴50% */
+    
+}
+/*transform translate 从当前位置移动元素*/
+#transformTranslate {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: aqua;
+    -webkit-transform: translate(50px,50px) skew(15deg) scale(2.0,2.0);/*transform translate 从当前位置移动元素 x正值想右，负值向左，y轴正值向下，负值向上
+                                                                         transform skew根据倾斜角度设置倾斜，如果没有指定第二个参数y轴，默认为0
+                                                                         transform scale(2.0,2.0) x，y缩放倍数 */
+    animation-name: transformPlay;       
+    animation-duration: 5s;       
+    animation-timing-function: linear;/*类似transition-timing-function*/  
+    animation-delay: 0.2s;/*延迟开始时间 单位s ms*/     
+    animation-iteration-count: infinite;/*数字代表重复几次，infinite代表永远重复*/  
+    animation-direction: normal;/*animation-direction前进方向 normal从0%到100%|reverse从100%到0%|altername先向前再向后|altername-reverse*/      
+    /*animation: transformPlay 4s linear 0.2s infinite normal 顺序不能改变*/                                 
+}
+
+
+
+/*@keyframes + 关键帧自定义名称  保存元素在特定时间样式  from 为0% 起始点，to 为100%结束点
+  animation 动画 animation-name:关键帧名称 animation-duration:动画持续时间 */
+@keyframes transformPlay {
+    0% {-webkit-transform: translate(50px,50px) skew(15deg) scale(2.0,2.0);}
+    30% {-webkit-transform: translate(50px,50px) skew(10deg) scale(1.75,1.75);}
+    80% {-webkit-transform: translate(50px,50px) skew(5deg) scale(1.5,1.5);}
+    100% {-webkit-transform: translate(50px,50px) skew(0deg) scale(1.0,1.0);}
+}
+/*3d转换 transform: rotateX(15deg) rotateY(15deg) rotateZ(15deg) 3d旋转
+         transform: translateX(x) translateY(y) translateZ(z) 支持任意css长度单位 3d转换
+         perspective 深度，将视角看做从观众到物体的距离，值越大，距离越远，只能影响3d转换元素*/
+#transform3d {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: yellow;
+    background-image: url("resource/演示3d.png");
+    background-size: cover;
+    transform: rotateX(-15deg) rotateY(-20deg) rotateZ(-25deg) translateX(35px) translateY(90px) translateZ(15px);
+    perspective: 155px;
+}         
+
+/*CSS过滤器 通常用于调整图像、背景和边框的渲染，为同一图像设置不同样式非常有用
+        过滤函数 blur() 模糊图像，定义多少像素混合，值越大，模糊程度越高 5px
+                brightness() 亮度，0%完全褐色，100%原图像
+                contrast() 对比度，低于100%降低对比度，高于100%增加对比度，0.5相当于50%
+                drop-shadow() 阴影 w宽 h高 b模糊 c颜色,
+                grayscale() 0%原图像 100完全灰度化
+                hue-rotate() 色调旋转 0deg~360deg
+                invert() 反转图像颜色，暗区域变亮，亮区域变暗，0%原图像，100%完全反转
+                opacity() 不透明度，0%完全透明，100%原图像
+                saturate() 饱和度，0%完全不饱和(灰度)，100%原图像，可以是数字
+                sepia() 类似grayscale但具有红棕色色调，比灰度更引人注目，100%为乌贼墨*/
+#filter {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: yellow;
+    background-image: url("resource/演示3d.png");
+    background-size: cover;
+    transform: rotateX(15deg) rotateY(20deg) rotateZ(25deg) translateX(50px) translateY(90px) translateZ(15px);
+    perspective: 155px;
+    filter: blur(1px) brightness(150%) contrast(1.5) drop-shadow(1px 1px 1px red) grayscale(1) hue-rotate(180deg) invert(1) opacity(0.5) saturate(0.5) sepia(1);
+}                 

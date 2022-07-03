@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--这是注释-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>网页练习</title>
+        <script>
+            document.write("网页第一行");
+        </script>
+        <noscript>
+            浏览器无法加载网页
+        </noscript>
+        <style>
+            h1 {color:red}
+            p {color:#FF00FF;font-size: 40px;}
+        </style>
+    </head>
+    <body>
+        <br>
+        <h1>这是标题</h1>
+        <p>表格</p>
+        <table border="1">
+            <tr>
+                <th>列1</th>
+                <th>列2</th>
+                <th>列3</th>
+            </tr>
+            <tr>
+                <td rowspan="2">行2</td>
+                <td colspan="2">行2列2列3</td>
+            </tr>
+            <tr>
+                <td>行3列2</td>
+                <td>行3列3</td>
+            </tr>
+        </table>
+
+        <p>表单</p>
+        <form action="D:\study\visualStudioFile\Markdown\html.html" method="get">
+            <input type="text" placeholder="注册用户名" id="username" name="username" required>
+            <br>
+            <input type="password" placeholder="密码" id="password" name="password">
+            <br>
+            <input type="radio" id="man" name="sex" value="man">
+            <label for="man">男</label>
+            <br>
+            <input type="radio" id="wuman" name="sex" value="wuman">
+            <label for="wuman">女</label>
+            <br>
+            <input type="checkbox" value="男神" name="model">男神
+            <br>
+            <input type="checkbox" value="偶像" name="model">偶像
+            <br>
+            <label for="age">年龄</label>
+            <select id="age" required>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+            </select>
+
+            <input type="submit" value="注册">
+        </form>
+
+        <p>列表</p>
+        <p style="color:green">有序列表</p>
+        <ol>
+            <li>抽烟</li>
+            <li>喝酒</li>
+        </ol>
+        <p style="color:green">无序列表</p>
+        <ul>
+            <li>抽烟</li>
+            <li>喝酒</li>
+        </ul>
+
+        <p>超链接</p>
+        <a href="https://www.baidu.com/" target="_blank">百度一下，你就知道</a>
+        <br>
+        <p>图片</p>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0314%252F94ad46dbj00qpy1do0021d200rs00rsg008t008t.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1656826971&t=99b55df3a8d9b4cf743028bcd9cb3e2d" alt="图片加载失败">
+    
+        <p>框架</p>
+        <iframe src="https://blog.csdn.net/qq_39218530/article/details/118671991" height="300" width="50%"></iframe>
+
+        <p>字符实体</p>
+        空格：空&nbsp;格
+        <br>
+        单引号：&apos;
+        <br>
+        双引号：&quot;
+        <br>
+        大于号：&gt;
+        <br>
+        小于号：&lt;
+        <br>
+        输入符号：&amp;
+
+    </body>
+</html>

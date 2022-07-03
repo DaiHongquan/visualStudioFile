@@ -1,0 +1,53 @@
+/*类选择器*/
+.myp {
+    color:red;
+    text-transform: uppercase;/*全大写*/
+    text-shadow: 4px 6px green;/*阴影 右4px 上6像素*/
+    
+}
+/*id选择器*/
+#myid {
+    color:#FF00FF;/*颜色*/
+    font-family: Arial, Helvetica, sans-serif;/*字体*/
+    font-size: 20px;/*字体大小*/
+    font-weight: 700;/*100-900 400为普通，700为加粗*/
+    font-style: italic;/*斜体*/
+    font-variant: small-caps;/*小型大写字母*/
+    text-align: center;/*居中*/
+    vertical-align: middle;/*垂直居中*/
+    border: 5px solid yellow;/*边框 5像素 实线 黄色*/
+    margin-top: 0.1em;/*顶部外边框 默认1em = 16px*/
+    padding-bottom: 0.5cm;/*底部内边距 0.5厘米*/
+    text-shadow: 4px 6px green;/*阴影 右4px 下6像素*/
+}
+/*元素选择器*/
+p {
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color:blue;
+    
+}
+
+/*属性选择器*/
+div[id] {
+    color: #FF00FF;
+    font-size: large;
+    width: 500px;
+    height: 900px;
+}
+/*属性选择器*/
+div[class*="mycalss"]{
+    color: #FF00FF;
+    font-size: x-large;
+}
+/*后代选择器*/
+.myclass .myclass2{
+    font-size: small;
+}
+/*选择器*/
+body {
+    background-color: aqua;/*背景颜色*/
+    background-image: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0314%252F94ad46dbj00qpy1do0021d200rs00rsg008t008t.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1656826971&t=99b55df3a8d9b4cf743028bcd9cb3e2d");/*背景图片*/
+    background-repeat: no-repeat;/*重复（平铺）*/
+}
