@@ -90,6 +90,10 @@ ALTER TABLE table_name DROP field_name;
 SELECT * FROM table_name;
 SELECT field1 AS name1, ... fieldN AS nameN FROM table_name table_name1 WHERE CONDITION1 [AND | OR] CONDITION2;
 
+朱子升 法律助理 ID:21418700, 15951738662，430302199801174511
+程静 法律总监 ID:21418693, 13828869431，131181198504143540
+
+
 
 
 
